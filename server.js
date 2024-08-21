@@ -24,7 +24,9 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
-
+app.get('/', (req, res) => {
+    res.send('Welcome to the API!');
+});
 // Routes
 app.use('/api/v1/user', userRoutes);
 app.use('/api/v1/user/action', inrouter);
